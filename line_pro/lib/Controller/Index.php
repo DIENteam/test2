@@ -4,11 +4,13 @@ namespace MyApp\Controller;
 
 class Index extends \MyApp\Controller {
 
+  // 始めはindexを読み込む
   public function run() {
+    // loginされてない場合login.phpにheaderする
     if (!$this->isLoggedIn()) {
-      // login
       header('Location: ' . SITE_URL . '/login.php');
     }
+
     // get users info
     $userModel = new \MyApp\Model\User();
     $this->setValues('users', $userModel->findAll());
@@ -18,6 +20,7 @@ class Index extends \MyApp\Controller {
   }
 
   //created by myself_stop
+  // 正しく入力され、submitした後の処理.comfirmに飛ばす
   protected function postProcess() {
     $userModel = new \MyApp\Model\User();
     $this->setValues('title', $_POST['title']);

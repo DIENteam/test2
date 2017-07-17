@@ -49,6 +49,7 @@ class Login extends \MyApp\Controller {
   }
 
   private function _validate() {
+    // loginの入力欄にちゃんと文字が入力されているかを確認する
     if (!isset($_POST['token']) || $_POST['token'] !== $_SESSION['token']) {
       echo "Invalid Token!";
       exit;
