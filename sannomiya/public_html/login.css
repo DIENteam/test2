@@ -1,0 +1,93 @@
+body{
+
+  font-size:16px;
+
+  font-family: Verdana,sans-serif;
+
+
+}
+
+table {
+	border-collapse: collapse;
+
+}
+td {
+	border: solid 1px;
+	padding: 0.5em;
+}
+
+#container{
+  width:280px auto;
+  margin:0 auto;
+}
+
+.image {
+  width: 100%;
+  position:absolute;
+  padding:0;
+  margin:0;
+  left:0;
+  top:0;
+  background-image: url("akaunnto.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.image:after{
+  content: "";
+  display: block;
+  padding-top:50%; /* 縦横比が1:2となる*/
+}
+@media screen and (min-width:768px){
+  .image {
+    background-image: url("akaunnto.jpg");
+  }
+}
+
+
+
+
+
+form{
+  text-align:center;
+}
+
+form#logout{
+  text-align:center;
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+input[type=text],
+input[type=password]{
+  padding:5px;
+  border-radius:4px;
+  font-size:14px;
+}
+
+.btn{
+  width:100px;
+  padding:7px;
+  border-radius: 5px;
+  color:#fff;
+  background:#00aaff;
+  box-shadow: 0 3px 0 #0088cc;
+  cursor: pointer;
+  margin: 0 auto 15px;
+}
+
+.btn:hover{
+  opacity:0.8;
+}
+
+.fs12{
+  font-size:12px;
+  font-weight: normal;
+  font-size: 13px;
+}
+
+.err {
+  color: #ff3d00;
+  font-weight: bold;
+  font-size: 13px;
+}
